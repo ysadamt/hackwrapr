@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='pt-28 justify-center bg-[#F4EADB]'>
+    <div className='pt-20 justify-center bg-[#F4EADB] h-screen overflow-hidden'>
 
       <div className='font-bold text-7xl text-[#10254E] text-center '>HackWrapr</div>
       <div className='font-bold text-xl text-[#10254E] text-center'>hackathons, enumerated.</div>
@@ -17,18 +17,17 @@ export default function Home() {
       </div>
       <div className='font-bold text-l text-[#10254E] ml-48'>ex) tamuhack-2023.devpost.com</div>
 
-      <div className='flex justify-center w-screen pt-16'>
-        <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-14 p-4 w-[200px] px-4 text-center text-[#10254E] rounded-2xl'>enter</Link>
+      <div className='flex justify-center items-center w-screen pt-16'>
+        <Link href= "/" className='bg-[rgba(16,37,78,0.25)] p-4 w-[200px] px-4 text-center text-[#10254E] rounded-2xl text-2xl font-bold'>enter</Link>
       </div>
 
-      <div class="flex flex-wrap justify-center py-4">
+      <div class="flex flex-wrap justify-center py-4 w-screen ">
         <img
       src="\waves.png"
-      class="h-auto max-w-screen rounded-lg shadow-none duration-300 ease-in-out"
+      className="w-screen rounded-lg duration-300 ease-in-out overflow-clip"
       alt="" />
         </div>
         
     </div>
-
   )
 }
