@@ -69,6 +69,7 @@ export default function Language() {
                 }
               }}
               disabled={correct !== "unanswered" ? true : false}
+              key={language}
             >
               {language}
             </button>

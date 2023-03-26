@@ -42,12 +42,7 @@ export default function Home() {
 
   return (
     <div className="pt-20 justify-center bg-[#F4EADB] h-screen overflow-hidden">
-      <Link href="/">
-        <img
-          src="\hackwrapr_logo 1.png"
-          className="w-32 absolute left-0 top-2"
-        />
-      </Link>
+      <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
       <div className="font-bold text-7xl text-[#10254E] text-center ">
         HackWrapr
       </div>
@@ -68,11 +63,7 @@ export default function Home() {
             ></input>
             {/* <input className='focus:outline-none bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input> */}
             <div className="mt-4 mx-3">
-              <img
-                src="\arrow.png"
-                className="duration-300 ease-in-out w-6 h-6"
-                alt=""
-              />
+              <img src="\arrow.png" className="duration-300 ease-in-out w-6 h-6" alt="" />
             </div>
           </div>
         </div>
