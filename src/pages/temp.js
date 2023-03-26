@@ -2,8 +2,6 @@ import { Inter } from "next/font/google";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Temp() {
   const [url, setUrl] = useState("");
   const [bruh, setBruh] = useState("");
