@@ -11,6 +11,7 @@ export default function Home() {
       
       <div className='flex justify-center w-screen pt-20 pb-4'>
         <input className='bg-[rgba(16,37,78,0.25)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
+        <img src="\arrow.png" className=" duration-300 ease-in-out" alt="" />
       </div>
       {/* <div className='font-bold text-l text-[#10254E] ml-48'>ex) tamuhack-2023.devpost.com</div> */}
 
