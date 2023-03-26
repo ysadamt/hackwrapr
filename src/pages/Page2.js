@@ -28,6 +28,7 @@ export default function Page2() {
 
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
+        <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
       <div>
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of commits

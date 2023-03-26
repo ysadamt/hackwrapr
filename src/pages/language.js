@@ -3,6 +3,7 @@ import Link from 'next/link'
 export default function Language() {
     return (
         <div className='pt-28 bg-[#F4EADB]'>
+            <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
             <div className='font-bold text-5xl text-[#10254E] text-center'>most popular language</div>
             <div className='font-bold text-xl text-[#10254E] text-center'>take a guess!</div>
 
