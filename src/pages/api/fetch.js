@@ -310,6 +310,17 @@ async function getNumParticipants(link) {
   return numParticipants;
 }
 
+async function getHackathonName(link) {
+  const mainPage = await fetchFromWebOrCache(`https://${link}`);
+
+  const hackathonNameElement = mainPage.querySelector(
+    "div.row div.large-8.columns.content h1"
+  );
+  const hackathonName = hackathonNameElement.textContent?.trim();
+
+  return hackathonName;
+}
+
 async function getAllSubmissions(link) {
   const allSubmissions = [];
 
@@ -337,6 +348,7 @@ export default async function handler(req, res) {
   const [startTime, endTime] = await getStartAndEndTimes(link);
   const commitTimes = await fetchAllCommitTimes(startTime, endTime, repos);
 
+  const HACKATHON_NAME = await getHackathonName(link);
   const NUM_PARTICIPANTS = await getNumParticipants(link);
   const NUM_PROJECTS = await getNumProjects(link);
   const NUM_COMMITS = commitTimes.length;
@@ -344,6 +356,7 @@ export default async function handler(req, res) {
   const HOUR_OCCURRENCES = fetchHourOccurrences(commitTimes);
 
   const result = {
+    hackathonName: HACKATHON_NAME,
     numParticipants: NUM_PARTICIPANTS,
     numProjects: NUM_PROJECTS,
     numCommits: NUM_COMMITS,

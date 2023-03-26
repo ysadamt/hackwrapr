@@ -2,6 +2,7 @@ import react, { useEffect } from "react";
 import { useState } from "react";
 import Slider from "react-input-slider";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Page1() {
   const [state, setState] = useState({ x: 1000 });
@@ -21,8 +22,9 @@ export default function Page1() {
           router.replace({
             pathname: "/Page2",
             query: {
+              hackathonName: router.query.hackathonName,
               numParticipants: NUM_PARTICIPANTS,
-              numProjects: NUM_PROJECTS,  
+              numProjects: NUM_PROJECTS,
               topLanguages: router.query.topLanguages,
               hourOccurrences: router.query.hourOccurrences,
               numCommits: router.query.numCommits,
@@ -43,13 +45,25 @@ export default function Page1() {
 
   return (
     <div className="pt-24 bg-[#F4EADB] overflow-x-hidden">
-      <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
-      <div>
+      <Link href="/" className="overflow-x-hidden">
+        <img
+          src="\hackwrapr_logo 1.png"
+          className="w-32 absolute left-0 top-2"
+        />
+      </Link>
+      <div className="overflow-x-hidden">
+        <div className="absolute flex justify-center w-full top-4 font-bold text-[#10254E]">
+          use arrow keys to navigate between pages!
+        </div>
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of participants
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-16">
-          take a guess!
+        <div className="font-bold text-xl text-[#10254E] text-center pb-16 mt-4">
+          {stateCorrect === "unanswered"
+            ? "take a guess!"
+            : stateCorrect === "correct"
+            ? "correct!"
+            : `incorrect! the answer was ${NUM_PARTICIPANTS}`}
         </div>
       </div>
 
@@ -100,7 +114,7 @@ export default function Page1() {
           }`}
           onClick={() => {
             if (state.x === Number(NUM_PARTICIPANTS)) {
-                console.log(state.x, Number(NUM_PARTICIPANTS));
+              console.log(state.x, Number(NUM_PARTICIPANTS));
               setStateCorrect("correct");
             } else {
               console.log(state.x, NUM_PARTICIPANTS);
@@ -119,8 +133,12 @@ export default function Page1() {
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of projects
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-16">
-          take a guess!
+        <div className="font-bold text-xl text-[#10254E] text-center pb-16 mt-4">
+          {stateCorrect2 === "unanswered"
+            ? "take a guess!"
+            : stateCorrect2 === "correct"
+            ? "correct!"
+            : `incorrect! the answer was ${NUM_PROJECTS}`}
         </div>
       </div>
 
@@ -173,11 +191,11 @@ export default function Page1() {
           }`}
           onClick={() => {
             if (state2.x === Number(NUM_PROJECTS)) {
-                console.log(state2.x, Number(NUM_PROJECTS));
+              console.log(state2.x, Number(NUM_PROJECTS));
 
               setStateCorrect2("correct");
             } else {
-                console.log(state.x, Number(NUM_PROJECTS));
+              console.log(state.x, Number(NUM_PROJECTS));
               setStateCorrect2("incorrect");
             }
           }}
