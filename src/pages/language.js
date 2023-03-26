@@ -23,7 +23,7 @@ export default function Language() {
         <div className="grid grid-cols-2 gap-20 content-center w-screen pt-32 pb-28 px-48">
           {SHUFFLED_LANGUAGES.map((language) => (
             <button
-              className={`font-bold  h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-lg hover:shadow-black/30 ${
+              className={`font-bold  h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-md hover:shadow-black/30 ${
                 correct === "unanswered"
                   ? "bg-[rgba(16,37,78,0.25)]"
                   : correct === "correct"

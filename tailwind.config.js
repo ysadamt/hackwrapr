@@ -5,7 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-    },
+    //   fontFamily: {
+    //   "monoton": 'Monoton',
+
+    // },
   },
+
   plugins: [],
+},
 };

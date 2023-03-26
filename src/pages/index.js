@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
+
 export default function Home() {
   const [url, setUrl] = useState("");
   const [result, setResult] = useState(null);
@@ -40,9 +41,9 @@ export default function Home() {
   };
 
   return (
-    <div className="pt-20 justify-center bg-[#F4EADB] h-screen overflow-hidden">
+    <div className="pt-24 justify-center bg-[#F4EADB] h-screen overflow-hidden">
       <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
-      <div className="font-bold text-7xl text-[#10254E] text-center ">
+      <div  className=" font-bold text-7xl text-[#10254E] text-center">
         HackWrapr
       </div>
       <div className="font-bold text-xl text-[#10254E] text-center">
@@ -69,10 +70,10 @@ export default function Home() {
 
         <div className="font-bold text-l text-[#10254E] ml-48"></div>
 
-        <div className="flex justify-center items-center w-screen pt-16">
+        <div className="flex justify-center items-center w-screen pt-12">
           <button
             type="submit"
-            className="bg-[rgba(16,37,78,0.25)] p-4 w-[200px] px-4 text-center text-[#10254E] rounded-2xl text-2xl font-bold"
+            className="p-4 w-[200px] px-4 text-center bg-[#10254E] text-white rounded-2xl text-2xl font-bold hover:shadow-md hover:shadow-black/30"
           >
             enter
           </button>
@@ -104,7 +105,7 @@ export default function Home() {
         </div>
       </form> */}
 
-      <div className="flex flex-wrap justify-center py-4 w-screen ">
+      <div className="flex flex-wrap justify-center py-14 w-screen">
         <img
           src="\waves.png"
           className="w-screen rounded-lg duration-300 ease-in-out overflow-clip"

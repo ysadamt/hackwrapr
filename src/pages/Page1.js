@@ -95,7 +95,7 @@ export default function Page1() {
 
       <div className="flex w-screen justify-center">
         <button
-          className={`bg-[#10254E] text-white font-bold text-md rounded-2xl w-[100px] h-[50px] mt-5 ${
+          className={`bg-[#10254E] text-white font-bold text-md rounded-2xl w-[100px] h-[50px] mt-5 hover:shadow-md hover:shadow-black/30${
             stateCorrect !== "unanswered" ? "cursor-not-allowed opacity-50" : ""
           }`}
           onClick={() => {
@@ -166,7 +166,7 @@ export default function Page1() {
 
       <div className="flex w-screen justify-center pb-10">
         <button
-          className={`bg-[#10254E] text-white font-bold text-md rounded-2xl w-[100px] h-[50px] mt-5 ${
+          className={`bg-[#10254E] text-white font-bold text-md rounded-2xl w-[100px] h-[50px] mt-5 hover:shadow-md hover:shadow-black/30${
             stateCorrect2 !== "unanswered"
               ? "cursor-not-allowed opacity-50"
               : ""
