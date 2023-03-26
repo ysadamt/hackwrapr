@@ -40,11 +40,14 @@ export default function Language() {
 
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
+    <Link href="/">
+      <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
+    </Link>
       <div className="font-bold text-5xl text-[#10254E] text-center">
         most popular language
       </div>
-      <div className="font-bold text-xl text-[#10254E] text-center">
-        take a guess!
+      <div className="font-bold text-xl text-[#10254E] text-center mt-4">
+      {correct === "unanswered" ? "take a guess!" : correct === "correct" ? "correct!" : `incorrect! the answer was ${TOP_LANGUAGES[0]}`}
       </div>
 
       <div className="flex flex-col items-center justify-center ">

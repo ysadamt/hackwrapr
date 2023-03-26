@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Results() {
   const router = useRouter();
@@ -27,10 +28,12 @@ export default function Results() {
 
   return (
     <div className="w-full overflow-hidden bg-[#F4EADB] h-screen">
-      <img
-        src="\hackwrapr_logo 1.png"
-        className="w-32 absolute right-0 bottom-2"
-      />
+      <Link href="/">
+        <img
+          src="\hackwrapr_logo 1.png"
+          className="w-32 absolute right-0 bottom-2"
+        />
+      </Link>
       <div className="relative h-1/4 flex flex-wrap overflow-hidden justify-center top-[-10px]">
         <div className="absolute bottom-[115px] left-12 z-10 h-1/5 w-4/5 flex flex-col mx-1">
           <p className="rounded-lg text-5xl font-bold bg-white w-fit p-2">
@@ -67,7 +70,9 @@ export default function Results() {
         <div className="overflow-hidden">
           {/* the two main ones on the right */}
           <div className="mt-12">
-            <p className="text-6xl text-center font-bold">{MAX_HOUR < 12 ? `${MAX_HOUR} am` : `${MAX_HOUR} pm`}</p>
+            <p className="text-6xl text-center font-bold">
+              {MAX_HOUR < 12 ? `${MAX_HOUR} am` : `${MAX_HOUR} pm`}
+            </p>
             <p>hours of most commits</p>
           </div>
           <div className="mt-24">

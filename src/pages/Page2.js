@@ -2,6 +2,8 @@ import react, { useEffect } from "react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Slider from "react-input-slider";
+import Link from "next/link";
+
 
 export default function Page2() {
   const [state, setState] = useState({ x: 5000 });
@@ -28,17 +30,17 @@ export default function Page2() {
 
   function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
-}
+  }
 
   const TOP_LANGUAGES = router.query.topLanguages;
-  const SHUFFLED_LANGUAGES = [].concat(TOP_LANGUAGES)
+  const SHUFFLED_LANGUAGES = [].concat(TOP_LANGUAGES);
 
-  shuffleArray(SHUFFLED_LANGUAGES)
+  shuffleArray(SHUFFLED_LANGUAGES);
 
   useEffect(() => {
     function handleKeyDown(event) {
@@ -47,7 +49,7 @@ export default function Page2() {
           router.replace({
             pathname: "/language",
             query: {
-              hackathonName: router.query.hackathonName,  
+              hackathonName: router.query.hackathonName,
               numParticipants: router.query.numParticipants,
               numProjects: router.query.numProjects,
               topLanguages: router.query.topLanguages,
@@ -71,13 +73,22 @@ export default function Page2() {
 
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
-        <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
+      <Link href="/">
+        <img
+          src="\hackwrapr_logo 1.png"
+          className="w-32 absolute left-0 top-2"
+        />
+      </Link>
       <div>
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of commits
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-20">
-          take a guess!
+        <div className="font-bold text-xl text-[#10254E] text-center pb-20 mt-4">
+          {stateCorrect === "unanswered"
+            ? "take a guess!"
+            : stateCorrect === "correct"
+            ? "correct!"
+            : `incorrect! the answer was ${NUM_COMMITS}`}
         </div>
       </div>
 
@@ -143,8 +154,14 @@ export default function Page2() {
         <div className="font-bold text-5xl text-[#10254E] text-center">
           hour with the most commits
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-20">
-          take a guess!
+        <div className="font-bold text-xl text-[#10254E] text-center pb-20 mt-4">
+          {stateCorrect2 === "unanswered"
+            ? "take a guess!"
+            : stateCorrect2 === "correct"
+            ? "correct!"
+            : `incorrect! the answer was ${
+                MAX_HOUR < 12 ? MAX_HOUR : MAX_HOUR - 12
+              } ${MAX_HOUR < 12 ? "am" : "pm"}`}
         </div>
       </div>
 
