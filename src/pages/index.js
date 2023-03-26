@@ -44,28 +44,12 @@ export default function Home() {
 
       <div className='font-bold text-7xl text-[#10254E] text-center '>HackWrapr</div>
       <div className='font-bold text-xl text-[#10254E] text-center'>hackathons, enumerated.</div>
-{/*       
-      <div className='flex justify-center w-screen pt-20 pb-4'>
-        <div className='flex bg-[rgba(16,37,78,0.25)]  h-14 p-4 w-[900px] rounded-2xl pt-5'>
-          <input className='bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
-          <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
-        </div>
-      </div> */}
       <div className='flex justify-center w-screen pt-20'>
         <div className='flex bg-[rgba(16,37,78,0.25)]  h-14 w-[900px] rounded-2xl'>
         <input className='bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
-        {/* <input className='focus:outline-none bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input> */}
-          <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
+          <img src="\arrow.png" className="w-6 h-6 duration-300 ease-in-out" alt="" />
         </div>
       </div>
-        
-{/* 
-      <div class="relative">
-        <img src="\arrow.png" class="absolute" />
-        <div className='flex justify-center w-screen pt-20 pb-4'>
-          <div class='absolute bg-[rgba(16,37,78,0.25)] h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></div>
-        </div>
-      </div> */}
 
       <div className='font-bold text-l text-[#10254E] ml-48'></div> 
 
