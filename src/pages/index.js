@@ -8,22 +8,39 @@ export default function Home() {
 
       <div className='font-bold text-7xl text-[#10254E] text-center '>HackWrapr</div>
       <div className='font-bold text-xl text-[#10254E] text-center'>hackathons, enumerated.</div>
-      
+{/*       
       <div className='flex justify-center w-screen pt-20 pb-4'>
-        <input className='bg-[rgba(16,37,78,0.25)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
-        <img src="\arrow.png" className=" duration-300 ease-in-out" alt="" />
+        <div className='flex bg-[rgba(16,37,78,0.25)]  h-14 p-4 w-[900px] rounded-2xl pt-5'>
+          <input className='bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
+          <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
+        </div>
+      </div> */}
+      <div className='flex justify-center w-screen pt-20'>
+        <div className='flex bg-[rgba(16,37,78,0.25)]  h-14 w-[900px] rounded-2xl'>
+        <input className='bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
+        {/* <input className='focus:outline-none bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input> */}
+          <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
+        </div>
       </div>
-      {/* <div className='font-bold text-l text-[#10254E] ml-48'>ex) tamuhack-2023.devpost.com</div> */}
+        
+{/* 
+      <div class="relative">
+        <img src="\arrow.png" class="absolute" />
+        <div className='flex justify-center w-screen pt-20 pb-4'>
+          <div class='absolute bg-[rgba(16,37,78,0.25)] h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></div>
+        </div>
+      </div> */}
+
+      <div className='font-bold text-l text-[#10254E] ml-48'></div> 
 
       <div className='flex justify-center items-center w-screen pt-16'>
         <Link href= "/" className='bg-[rgba(16,37,78,0.25)] p-4 w-[200px] px-4 text-center text-[#10254E] rounded-2xl text-2xl font-bold'>enter</Link>
       </div>
 
       <div className="flex flex-wrap justify-center py-4 w-screen ">
-        <img
-      src="\waves.png"
-      className="w-screen rounded-lg duration-300 ease-in-out overflow-clip"
-      alt="" />
+        <img src="\waves.png"
+          className="w-screen rounded-lg duration-300 ease-in-out overflow-clip"
+          alt="" />
         </div>
         
     </div>
