@@ -2,20 +2,19 @@ import React from "react";
 
 export default function Results(){
     return(
-        <div className="w-full" >
-            <div className="relative h-1/4 flex flex-wrap justify-center py-0">
-                <div className="absolute bottom-28 left-12 z-10 h-1/5 w-4/5 flex flex-col">
+        <div className="w-full overflow-hidden" >
+            <div className="relative h-1/4 flex flex-wrap overflow-hidden justify-center top-[-10px]">
+                <div className="absolute bottom-[145px] left-12 z-10 h-1/5 w-4/5 flex flex-col">
                     <p className="rounded-lg text-4xl bg-white w-fit text-base font-mono">hackathon name</p>
                     <p className="rounded-lg text-7xl bg-white w-fit font-mono font-bold mt-2">by the numbers</p>
                 </div>
 
                 <img
                     src="\waves.png"
-                    className="h-1/4 max-w-screen rounded-lg shadow-none duration-300 ease-in-out"
+                    className="mt-[-50px] h-auto overflow-hidden min-w-screen rounded-lg shadow-none duration-300 ease-in-out"
                     alt="" />
-        
             </div>
-            <div className="flex flex-wrap flex-row font-mono justify-between w-4/5 text-4xl mx-auto h-fit gap-24">
+            <div className="overflow-hidden flex flex-wrap flex-row font-mono justify-between w-4/5 text-4xl mx-auto h-fit gap-24">
                 <div className="h-fit ">
                     {/* three things on the left */}
                     <div className="mt-12">
@@ -32,7 +31,7 @@ export default function Results(){
                     </div>
                 </div>
 
-                <div className="h-fit">
+                <div className="overflow-hidden">
                     {/* the two main ones on the right */}
                     <div className="mt-12">
                         <p className="text-6xl text-center">11:00PM</p>
