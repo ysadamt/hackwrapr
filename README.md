@@ -1,38 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Inspiration
+If you’re reading this, then like us, you’re probably passionate about attending and/or organizing hackathons. You’ve also probably found yourself looking up information regarding a hackathon either in preparation for or in review of the event. 
 
-## Getting Started
+Personally, we found that the process of finding the aforementioned info can be dull, tedious, and very repetitive, so we decided to do something about it! We created a faster, engaging, and more precise tool for getting info on hackathons: HackWrapr!
 
-First, run the development server:
+We know that every team will say that their project is ground-breaking and maybe they all are, but we urge you to just give ours a try. If you do, we believe that you will truly wonder why you ever searched up hackathons any other way.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## What it does
+All you have to do is paste the devpost link for the hackathon of interest, and at the push of a button, HackWrapr will scrape the internet for information on the event and provide it to you in a gamified manner. You are given a chance to guess the values of the info, and afterwards its true value will be revealed alongside whether you guessed correctly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How we built it
+Brainstorming: 
+1. We discussed what we’d like to implement, keeping in mind the time limitation.
+2. We sketched up a draft for what the website could look like using figma. 
+3. We distributed the programming amongst the three of us appropriately.
+Technical:
+1. Using React.js, Next.js, and Tailwind, we created the GUI/frontend of our website
+2. Our backend, created with JavaScript, takes in the devpost link submitted by our user, and uses algorithms we wrote ourselves, parses through all of the information in all the devpost submissions at the hackathon
+3. Petty note: there is no devpost api, we had to scrape all the information ourselves. It sucked, but we got through it and wanted to mention that
+4. After parsing all the info from the devpost submissions, we utilized the github api to parse through all the information from the github repositories submitted to the hackathon, still using just JavaScript
+5. At the end of this, we went through all the info that we have, took out specific pieces we deemed important, and presented it to our user in a gamified manner
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Challenges we ran into
+1. The hell that is merging git branches was difficult to navigate. But sitting down with one another, and drawing out our processes, we were able to get it running.
+2. As two of the three of us had never used React.js and Tailwind on the level that we did today, it was a bit hard to navigate at the beginning, but we were able to catch up!
+3. Creating an interactive slider for the game portion of our website on React
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Accomplishments that we're proud of
+1. The slider we put on for the game portion of our website was really difficult to implement. We were able to get the slider on our page with relative ease, however, customizing it was a totally different story. Although it doesn’t seem like much, our little slider makes us very proud. 
+2. We scraped through enormous amounts of data!
+3. As we’re beginner hackers we were really nervous coming in, but in the end we were able to make a really well designed and implemented website!
+## What we learned
+How to utilize: React.js, Next.js, and JavaScript
+How to utilize: Tailwind and CSS
+How to utilize: Figma
+How to utilizeProcreate
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## What's next for HackWrapr
+We would love to implement more games/levels in the gaming portion 
+We would love to allow users to specify what info they want returned
+We would like animate items on our website
+We would love to use more interesting fonts
