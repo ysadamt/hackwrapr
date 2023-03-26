@@ -41,19 +41,13 @@ export default function Home() {
 
   return (
     <div className="pt-20 justify-center bg-[#F4EADB] h-screen overflow-hidden">
+      <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
       <div className="font-bold text-7xl text-[#10254E] text-center ">
         HackWrapr
       </div>
       <div className="font-bold text-xl text-[#10254E] text-center">
         hackathons, enumerated.
       </div>
-      {/*       
-      <div className='flex justify-center w-screen pt-20 pb-4'>
-        <div className='flex bg-[rgba(16,37,78,0.25)]  h-14 p-4 w-[900px] rounded-2xl pt-5'>
-          <input className='bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input>
-          <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
-        </div>
-      </div> */}
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center w-screen pt-20">
           <div className="flex bg-[rgba(16,37,78,0.25)]  h-14 w-[900px] rounded-2xl">
@@ -67,17 +61,11 @@ export default function Home() {
               }}
             ></input>
             {/* <input className='focus:outline-none bg-[rgba(16,37,78,0.0)]  h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></input> */}
-            <img src="\arrow.png" className="duration-300 ease-in-out" alt="" />
+            <div className="mt-4 mx-3">
+              <img src="\arrow.png" className="duration-300 ease-in-out w-6 h-6" alt="" />
+            </div>
           </div>
         </div>
-
-        {/* 
-      <div class="relative">
-        <img src="\arrow.png" class="absolute" />
-        <div className='flex justify-center w-screen pt-20 pb-4'>
-          <div class='absolute bg-[rgba(16,37,78,0.25)] h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]' placeholder='ex. tamuhack-2023.devpost.com'></div>
-        </div>
-      </div> */}
 
         <div className="font-bold text-l text-[#10254E] ml-48"></div>
 

@@ -42,12 +42,13 @@ export default function Page1() {
   }, [router]);
 
   return (
-    <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
+    <div className="pt-24 bg-[#F4EADB] overflow-x-hidden">
+      <img src="\hackwrapr_logo 1.png" className="w-32 absolute left-0 top-2"/>
       <div>
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of participants
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-20">
+        <div className="font-bold text-xl text-[#10254E] text-center pb-16">
           take a guess!
         </div>
       </div>
@@ -118,7 +119,7 @@ export default function Page1() {
         <div className="font-bold text-5xl text-[#10254E] text-center">
           number of projects
         </div>
-        <div className="font-bold text-xl text-[#10254E] text-center pb-20">
+        <div className="font-bold text-xl text-[#10254E] text-center pb-16">
           take a guess!
         </div>
       </div>
