@@ -14,10 +14,30 @@ export default function Page1() {
   const NUM_PROJECTS = router.query.numProjects || 0;
 
   useEffect(() => {
-    console.log(NUM_PARTICIPANTS);
     console.log(NUM_PROJECTS);
-    console.log(stateCorrect);
-  }, [stateCorrect]);
+    function handleKeyDown(event) {
+      switch (event.keyCode) {
+        case 39: // ArrowRight
+          router.replace({
+            pathname: "/Page2",
+            query: {
+              topLanguages: router.query.topLanguages,
+              hourOccurrences: router.query.hourOccurrences,
+              numCommits: router.query.numCommits,
+            },
+          });
+          break;
+        default:
+          break;
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [router]);
 
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
@@ -77,8 +97,12 @@ export default function Page1() {
           }`}
           onClick={() => {
             if (state.x === Number(NUM_PARTICIPANTS)) {
+                console.log(state.x, Number(NUM_PARTICIPANTS));
               setStateCorrect("correct");
             } else {
+              console.log(state.x, NUM_PARTICIPANTS);
+              console.log(state.x, Number(NUM_PARTICIPANTS));
+
               setStateCorrect("incorrect");
             }
           }}
@@ -140,12 +164,17 @@ export default function Page1() {
       <div className="flex w-screen justify-center pb-10">
         <button
           className={`bg-[#10254E] text-white font-bold text-md rounded-2xl w-[100px] h-[50px] mt-5 ${
-            stateCorrect2 !== "unanswered" ? "cursor-not-allowed opacity-50" : ""
+            stateCorrect2 !== "unanswered"
+              ? "cursor-not-allowed opacity-50"
+              : ""
           }`}
           onClick={() => {
             if (state2.x === Number(NUM_PROJECTS)) {
+                console.log(state2.x, Number(NUM_PROJECTS));
+
               setStateCorrect2("correct");
             } else {
+                console.log(state.x, Number(NUM_PROJECTS));
               setStateCorrect2("incorrect");
             }
           }}

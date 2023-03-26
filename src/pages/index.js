@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     console.log(result);
     if (result) {
-      router.push({
+      router.replace({
         pathname: "/Page1",
         query: {
           numParticipants: result.numParticipants,
