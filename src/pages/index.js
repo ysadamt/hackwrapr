@@ -55,7 +55,7 @@ export default function Home() {
           <div className="flex bg-[rgba(16,37,78,0.25)]  h-14 w-[900px] rounded-2xl">
             <input
               className="bg-[rgba(16,37,78,0)] focus:outline-none h-14 p-4 w-[900px] rounded-2xl placeholder-[rgba(16,37,78,0.5)]"
-              placeholder="ex. tamuhack-2023.devpost.com"
+              placeholder="ex. rowdyhacks2022.devpost.com"
               value={url}
               required={true}
               onChange={(e) => {
