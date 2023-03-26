@@ -6,15 +6,15 @@ export default function Language() {
             <div className='font-bold text-5xl text-[#10254E] text-center'>most popular language</div>
             <div className='font-bold text-xl text-[#10254E] text-center'>take a guess!</div>
 
-      <div className='flex flex-col items-center justify-center'>
+      <div className='flex flex-col items-center justify-center '>
             <div className='grid grid-cols-2 gap-20 content-center w-screen pt-32 pb-28 px-48'>
-                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl'>python</Link>
-                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl'>java</Link>
-                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl'>javascript</Link>
-                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl'>c++</Link>
+                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-lg hover:shadow-black/30'>python</Link>
+                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-lg hover:shadow-black/30'>java</Link>
+                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-lg hover:shadow-black/30'>javascript</Link>
+                <Link href= "/" className='bg-[rgba(16,37,78,0.25)] h-40 p-16 w-full px-4 text-center text-[#10254E] rounded-2xl text-2xl hover:shadow-lg hover:shadow-black/30'>c++</Link>
             </div>
         </div>
-
+        
         </div>
     )
 }
