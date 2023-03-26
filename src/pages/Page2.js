@@ -26,6 +26,48 @@ export default function Page2() {
   const HOUR_OCCURRENCES = JSON.parse(router.query.hourOccurrences);
   const MAX_HOUR = findHourWithMostOccurrences(HOUR_OCCURRENCES);
 
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+  const TOP_LANGUAGES = router.query.topLanguages;
+  const SHUFFLED_LANGUAGES = [].concat(TOP_LANGUAGES)
+
+  shuffleArray(SHUFFLED_LANGUAGES)
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      switch (event.keyCode) {
+        case 39: // ArrowRight
+          router.replace({
+            pathname: "/language",
+            query: {
+              numParticipants: router.query.numParticipants,
+              numProjects: router.query.numProjects,
+              topLanguages: router.query.topLanguages,
+              shuffledLanguages: SHUFFLED_LANGUAGES,
+              hourOccurrences: router.query.hourOccurrences,
+              numCommits: router.query.numCommits,
+            },
+          });
+          break;
+        default:
+          break;
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [router]);
+
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
       <div>
@@ -159,10 +201,10 @@ export default function Page2() {
           }`}
           onClick={() => {
             if (state2.x === Number(MAX_HOUR)) {
-                console.log(state2.x, MAX_HOUR)
+              console.log(state2.x, MAX_HOUR);
               setStateCorrect2("correct");
             } else {
-                console.log(state2.x, MAX_HOUR)
+              console.log(state2.x, MAX_HOUR);
               setStateCorrect2("incorrect");
             }
           }}
