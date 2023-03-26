@@ -71,9 +71,9 @@ async function fetchTopLanguages(repos) {
   const sortedLanguages = new Map(
     [...languages.entries()].sort((a, b) => b[1] - a[1])
   );
-  const topThreeLanguages = [...sortedLanguages.keys()].slice(0, 3);
+  const topFourLanguages = [...sortedLanguages.keys()].slice(0, 4);
 
-  return topThreeLanguages;
+  return topFourLanguages;
 }
 
 async function fetchRepoCommitTimes(repo, since, until) {
