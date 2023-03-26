@@ -6,7 +6,7 @@ export default function Results(){
             <img src="\hackwrapr_logo 1.png" className="w-32 absolute right-0 bottom-2"/>
             <div className="relative h-1/4 flex flex-wrap overflow-hidden justify-center top-[-10px]">
                 <div className="absolute bottom-[115px] left-12 z-10 h-1/5 w-4/5 flex flex-col mx-1">
-                    <p className="rounded-lg text-4xl bg-white w-fit text-base font-mono">hackathon name</p>
+                    <p className="rounded-lg text-4xl bg-white w-fit font-mono">hackathon name</p>
                     <p className="rounded-lg text-7xl bg-white w-fit font-mono font-bold mt-2">by the numbers</p>
                 </div>
 
