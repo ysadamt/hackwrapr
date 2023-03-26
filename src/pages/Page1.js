@@ -21,6 +21,7 @@ export default function Page1() {
           router.replace({
             pathname: "/Page2",
             query: {
+              hackathonName: router.query.hackathonName,
               numParticipants: NUM_PARTICIPANTS,
               numProjects: NUM_PROJECTS,  
               topLanguages: router.query.topLanguages,

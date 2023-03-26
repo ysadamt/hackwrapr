@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Language() {
   const [correct, setCorrect] = useState("unanswered");
@@ -9,6 +9,34 @@ export default function Language() {
 
   const TOP_LANGUAGES = router.query.topLanguages;
   const SHUFFLED_LANGUAGES = router.query.shuffledLanguages;
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      switch (event.keyCode) {
+        case 39: // ArrowRight
+          router.replace({
+            pathname: "/Results",
+            query: {
+              hackathonName: router.query.hackathonName,  
+              numParticipants: router.query.numParticipants,
+              numProjects: router.query.numProjects,
+              topLanguages: router.query.topLanguages,
+              hourOccurrences: router.query.hourOccurrences,
+              numCommits: router.query.numCommits,
+            },
+          });
+          break;
+        default:
+          break;
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [router]);  
 
   return (
     <div className="pt-28 bg-[#F4EADB] overflow-x-hidden">
